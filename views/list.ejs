@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1><%= date%></h1>
+    </div>
+    <div class="box">
+      <ol>
+        <% for(var i=0; i< n; i++){%>
+
+        <div class="item">
+          <input type="checkbox" />
+          <p><%= todolist[i] %></p>
+        </div>
+        <hr style="color: grey; margin-right: 40px;"/>
+        <%}%>
+      </ol>
+
+      <form action="/" method="post" class="item">
+        <input
+          type="text"
+          placeholder="Add new task"
+          name="newItem"
+          autocomplete="off"
+        />
+        <button type="submit" name="listType" value=<%=date%>>+</button>
+      </form>
+    </div>
+  </body>
+</html>
